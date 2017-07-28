@@ -41,7 +41,7 @@ object GeomesaHbaseWrite {
 
   val featureName = "event"
   val ingestFile =
-    "file:///Users/njayakumar/Desktop/GuyCarpenter/workspace/GeoAnalytics/src/main/resources/ingest.txt"
+    "file:///Users/njayakumar/Desktop/GC/workspace/GeoAnalytics/src/main/resources/ingest.txt"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
