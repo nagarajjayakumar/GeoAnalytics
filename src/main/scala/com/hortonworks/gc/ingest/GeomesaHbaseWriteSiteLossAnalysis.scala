@@ -38,7 +38,7 @@ object GeomesaHbaseWriteSiteLossAnalysis {
 
   val featureName = "sitelossanalyzevent"
   val ingestFile =
-    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_loss_analysis_1M/site_loss_analysis_1M.csv"
+    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_loss_analysis/site_loss_analysis.csv"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0

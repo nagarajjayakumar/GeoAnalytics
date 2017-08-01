@@ -1,5 +1,6 @@
 package com.hortonworks.gc.query
 
+import com.hortonworks.gc.udf.WidthBucket
 import org.apache.spark.sql.{SQLContext, SparkSession}
 
 object GeomesaHbaseReadUsingSparkSql {
