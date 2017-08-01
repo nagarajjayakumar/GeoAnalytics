@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6182251f-a49f-4888-958d-59e1249fe2d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/query/GeomesaHbaseReadUsingSparkSql.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/query/GeomesaHbaseReadUsingSparkSql.scala" />
-    </list>
+    <list default="true" id="6182251f-a49f-4888-958d-59e1249fe2d9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -563,12 +560,12 @@
       <workItem from="1501127635905" duration="7398000" />
       <workItem from="1501156074873" duration="79000" />
       <workItem from="1501156172431" duration="18236000" />
-      <workItem from="1501506747983" duration="14321000" />
+      <workItem from="1501506747983" duration="14370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70823000" />
+    <option name="totallyTimeSpent" value="70872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1420" height="853" extended-state="0" />
