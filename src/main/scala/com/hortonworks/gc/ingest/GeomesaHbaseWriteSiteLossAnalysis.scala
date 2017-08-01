@@ -38,7 +38,7 @@ object GeomesaHbaseWriteSiteLossAnalysis {
 
   val featureName = "sitelossanalyzevent"
   val ingestFile =
-    "file:///Users/njayakumar/Desktop/GC/workspace/GeoAnalytics/src/main/resources/ingest_site_loss_analysis_csv.txt"
+    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_loss_analysis_1M/site_loss_analysis_1M.csv"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
@@ -72,7 +72,7 @@ object GeomesaHbaseWriteSiteLossAnalysis {
     */
   def createSimpleFeature(value: String): SimpleFeature = {
 
-    val attributes: Array[String] = value.toString.split("\\,", -1)
+    val attributes: Array[String] = value.toString.split("\\|", -1)
 
     val simpleFeature: SimpleFeature =
       featureBuilder.buildFeature(attributes(ID_COL_IDX))
@@ -103,7 +103,7 @@ object GeomesaHbaseWriteSiteLossAnalysis {
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-    conf.setMaster("local[3]")
+    //conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
