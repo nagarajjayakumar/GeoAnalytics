@@ -1,6 +1,6 @@
 package com.hortonworks.gc.query
 
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{SQLContext, SparkSession}
 
 object GeomesaHbaseReadUsingSparkSql {
 
@@ -38,7 +38,35 @@ object GeomesaHbaseReadUsingSparkSql {
       .option("geomesa.feature", siteLossAnalyzFeatureTypeName)
       .load()
 
-    dataFrameSiteLossAnalyz.createOrReplaceTempView(siteLossAnalyzFeatureTypeName)
+    dataFrameSiteLossAnalyz.createOrReplaceTempView(
+      siteLossAnalyzFeatureTypeName)
+
+    val sc = sparkSession.sparkContext
+    val sqlContext = new SQLContext(sc)
+
+    sqlContext.udf.register(
+      "WIDTH_BUCKET",
+      (expr: Double, minValue: Double, maxValue: Double, numBucket: Long) => {
+
+        if (numBucket <= 0) {
+          throw new RuntimeException(
+            s"The num of bucket must be greater than 0, but got ${numBucket}")
+        }
+
+        val lower: Double = Math.min(minValue, maxValue)
+        val upper: Double = Math.max(minValue, maxValue)
+
+        val result: Long = if (expr < lower) {
+          0
+        } else if (expr >= upper) {
+          numBucket + 1L
+        } else {
+          (numBucket.toDouble * (expr - lower) / (upper - lower) + 1).toLong
+        }
+
+        if (minValue > maxValue) (numBucket - result) + 1 else result
+      }
+    )
 
     // Query against the "event" schema
 
