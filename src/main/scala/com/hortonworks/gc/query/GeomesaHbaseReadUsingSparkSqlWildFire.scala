@@ -43,7 +43,7 @@ object GeomesaHbaseReadUsingSparkSqlWildFire {
 
 
     val sqlQuery =
-      "select count(*) from wildfireevent"
+      "select OBJECTID, ACRES from wildfireevent  where OBJECTID < 100 limit 10"
 
     val resultDataFrame = sparkSession.sql(sqlQuery)
 

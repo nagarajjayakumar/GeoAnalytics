@@ -1,4 +1,4 @@
-package com.hortonworks.gc.ingest
+package com.hortonworks.gc
 
 import java.io.{File, FileInputStream}
 import java.util
@@ -92,12 +92,69 @@ object GeoJsonIngestWildFireShapes {
       .getOrCreate()
 
     val name = "wildfireidx"
+//    val index = new GeoJsonGtIndex(ds)
+//    index.createIndex(name, Some("$.properties.OBJECTID"), points = false)
+//
+//    val geoJsonContent = scala.io.Source.fromFile(ingestFile).mkString
+//
+//    index.add(name, geoJsonContent)
+//
+//    println(index.query(name, """{ "properties.objectid" : 4 }""").toList)
+
+
+
+//    val sparkContext = sparkSession.sparkContext
+//
+//    val distDataRDD = sparkContext.textFile(ingestFile)
+//
+//    val processedRDD: RDD[SimpleFeature] = distDataRDD.mapPartitions {
+//      valueIterator =>
+//        if (valueIterator.isEmpty) {
+//          Collections.emptyIterator
+//        }
+//
+//        valueIterator.map { s =>
+//          // Processing as before to build the SimpleFeatureType
+//          val simpleFeature = createSimpleFeature(s)
+//          if (!valueIterator.hasNext) {
+//            // cleanup here
+//          }
+//          simpleFeature
+//        }
+//    }
+//
+//
+//    processedRDD.take(1)
+//    println(processedRDD.take(1))
+
+
     val fjson = new FeatureJSON
+
     val file = new File(ingestFile)
     val fileIn = new FileInputStream(file)
+
+
     val featureCollection  = fjson.readFeatureCollection(fileIn)
+
     println(ingestToDataStore(featureCollection.asInstanceOf[SimpleFeatureCollection],ds,featureName))
+
     fileIn.close
+
+//    val shapefile =  FileDataStoreFinder.getDataStore(new File(ingestFile))
+//
+//    val featureCollection  = shapefile.getFeatureSource.getFeatures
+//
+//    GeneralShapefileIngest.ingestToDataStore(featureCollection,ds,Option(featureName))
+//
+////    println(featureCollection.size)
+////
+////    val index = new GeoJsonGtIndex(ds)
+
+
+
+
+    //GeoMesaSpark.apply(dsConf).save(processedRDD, dsConf, featureName)
+    //println(processedRDD.size)
 
     println("ingestion completed ...")
   }
