@@ -155,11 +155,11 @@
             <version>${geomesa.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.locationtech.geomesa</groupId>
-            <artifactId>geomesa-geojson_${scala.abi.version}</artifactId>
-            <version>${geomesa.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.locationtech.geomesa</groupId>-->
+            <!--<artifactId>geomesa-geojson_${scala.abi.version}</artifactId>-->
+            <!--<version>${geomesa.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.locationtech.geomesa</groupId>
