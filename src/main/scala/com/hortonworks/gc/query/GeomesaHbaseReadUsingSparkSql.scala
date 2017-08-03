@@ -1,7 +1,6 @@
 package com.hortonworks.gc.query
 
-import com.hortonworks.gc.udf.WidthBucket
-import org.apache.spark.sql.{SQLContext, SparkSession}
+import org.apache.spark.sql.SparkSession
 
 object GeomesaHbaseReadUsingSparkSql {
 
@@ -11,7 +10,7 @@ object GeomesaHbaseReadUsingSparkSql {
   val dsParams = Map("bigtable.table.name" -> "siteexposure")
 
   // matches the params in the datastore loading code
-  val featureTypeName = "event"
+  val featureTypeName:String = "event"
   val siteLossAnalyzFeatureTypeName = "sitelossanalyzevent"
   val geom = "geom"
 
@@ -42,8 +41,7 @@ object GeomesaHbaseReadUsingSparkSql {
     dataFrameSiteLossAnalyz.createOrReplaceTempView(
       siteLossAnalyzFeatureTypeName)
 
-    val sc = sparkSession.sparkContext
-    val sqlContext = new SQLContext(sc)
+    val sqlContext = sparkSession.sqlContext
 
     sqlContext.udf.register(
       "WIDTH_BUCKET",

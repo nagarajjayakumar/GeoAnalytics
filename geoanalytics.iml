@@ -312,6 +312,21 @@
     <orderEntry type="library" name="Maven: org.locationtech.geomesa:geomesa-spark-sql_2.11:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.geotools:gt-geojson:15.1" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.locationtech.geomesa:geomesa-geojson_2.11:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.locationtech.geomesa:geomesa-geojson-api_2.11:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.locationtech.geomesa:geomesa-geojson-rest_2.11:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.locationtech.geomesa:geomesa-web-core_2.11:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra:scalatra_2.11:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra:scalatra-common_2.11:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.clapper:grizzled-slf4j_2.11:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra.rl:rl_2.11:0.4.10" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.juniversalchardet:juniversalchardet:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: eu.medsea.mimeutil:mime-util:2.1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra:scalatra-auth_2.11:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: net.iharder:base64:2.3.8" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra:scalatra-swagger_2.11:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scalatra:scalatra-json_2.11:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.json4s:json4s-ext_2.11:3.2.10" level="project" />
     <orderEntry type="library" name="Maven: org.geotools:gt-wfs:15.1" level="project" />
     <orderEntry type="library" name="Maven: org.geotools:gt-xml:15.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xml:xml-commons-resolver:1.2" level="project" />

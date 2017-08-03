@@ -6,7 +6,7 @@ import java.util.Collections
 
 import com.google.common.base.Joiner
 import com.google.common.collect.Lists
-import com.vividsolutions.jts.geom.{Coordinate, Geometry, GeometryFactory}
+import com.vividsolutions.jts.geom.GeometryFactory
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 import org.geotools.data.{DataStoreFinder, DataUtilities}
@@ -17,7 +17,6 @@ import org.geotools.geometry.jts.JTSFactoryFinder
 import org.locationtech.geomesa.hbase.data.HBaseDataStore
 import org.locationtech.geomesa.spark.GeoMesaSpark
 import org.locationtech.geomesa.utils.interop.SimpleFeatureTypes
-import org.locationtech.geomesa.utils.text.WKTUtils
 import org.opengis.feature.simple.{SimpleFeature, SimpleFeatureType}
 
 import scala.collection.JavaConversions._
