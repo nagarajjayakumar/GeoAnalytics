@@ -1,6 +1,7 @@
 package com.hortonworks.gc.query
 
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.broadcast
 
 object GeomesaHbaseReadUsingSparkSqlWildFire {
 
@@ -30,6 +31,7 @@ object GeomesaHbaseReadUsingSparkSqlWildFire {
       .option("geomesa.feature", featureTypeName)
       .load()
 
+    dataFrame.filter("portfolio_id =1 ")
     dataFrame.createOrReplaceTempView(featureTypeName)
 
     val dataFramewildfireevent = sparkSession.read
@@ -41,7 +43,10 @@ object GeomesaHbaseReadUsingSparkSqlWildFire {
     dataFramewildfireevent.createOrReplaceTempView(
       "wildfireevent")
 
+    val resultDataFrame1  = dataFrame.join(broadcast(dataFramewildfireevent)).
+      where("st_contains('dataFrame.geom',  'dataFramewildfireevent.geometry' ) and portfolio_id = 1")
 
+    resultDataFrame1.show(10)
     //val sqlQuery =
     //  "select OBJECTID, ACRES from wildfireevent  where OBJECTID < 100 limit 10"
 

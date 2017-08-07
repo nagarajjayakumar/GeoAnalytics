@@ -77,7 +77,7 @@ object GeomesaHbaseWriteSiteLossAnalysis {
       featureBuilder.buildFeature(attributes(ID_COL_IDX))
     // be sure to tell GeoTools explicitly that you want to use the ID you provided
     simpleFeature.getUserData
-      .put(Hints.USE_PROVIDED_FID, java.lang.Boolean.TRUE)
+      .put(Hints.USE_PROVIDED_FID, java.lang.Boolean.FALSE)
 
     var i: Int = 0
     while (i < attributes.length) {

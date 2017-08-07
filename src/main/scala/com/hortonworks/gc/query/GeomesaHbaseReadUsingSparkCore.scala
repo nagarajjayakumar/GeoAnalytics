@@ -35,6 +35,7 @@ object GeomesaHbaseReadUsingSparkCore {
   // writes to HDFS - prepend with file:/// for local filesystem
   val outputFile = "file:////tmp/gdeltAttrRDD2016"
 
+
   case class site_exp(portfolio_id:Long,account_id:String,site_id:String, s_udf_met1:Double)
 
   def main(args: Array[String]) {

@@ -16,7 +16,6 @@ import org.geotools.feature.simple.SimpleFeatureBuilder
 import org.geotools.geometry.jts.JTSFactoryFinder
 import org.locationtech.geomesa.hbase.data.HBaseDataStore
 import org.locationtech.geomesa.spark.GeoMesaSpark
-import org.locationtech.geomesa.utils.interop.SimpleFeatureTypes
 import org.locationtech.geomesa.utils.text.WKTUtils
 import org.opengis.feature.simple.{SimpleFeature, SimpleFeatureType}
 
@@ -31,21 +30,21 @@ object GeomesaHbaseWrite {
   // works for latest version of Geomesa 1.3.2 + Spark 2.x
   // spark-2.0.0/bin/spark-submit --class com.hortonworks.gc.ingest.hbase.GeomesaHbaseWrite geomesa-utils-15-1.0.jar
 
-  val dsConf = Map("bigtable.table.name" -> "siteexposure_1M")
+  val dsConf = Map("bigtable.table.name" -> "1M_site_exp_portfolio")
 
   var LATITUDE_COL_IDX = 9
   var LONGITUDE_COL_IDX = 11
-  var ID_COL_IDX = 3
+  var ID_COL_IDX = 0
   var SHAPE_COL_IDX = 6
   var featureBuilder: SimpleFeatureBuilder = null
   var geometryFactory: GeometryFactory = JTSFactoryFinder.getGeometryFactory
 
-  val featureName = "event"
-  val ingestFile =
-      "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
-
+  val featureName = "siteexposure_event"
   //val ingestFile =
-  //  "file:///Users/njayakumar/Desktop/GuyCarpenter/workspace/GeoAnalytics/src/main/resources/ingest_full.txt"
+  //    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_exposure/site_exposure.csv"
+
+  val ingestFile =
+    "file:///Users/njayakumar/Desktop/GuyCarpenter/workspace/GeoAnalytics/src/main/resources/ingest_full.txt"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
@@ -226,14 +225,14 @@ object GeomesaHbaseWrite {
     val name = featureName
     val spec = Joiner.on(",").join(attributes)
     val featureType = DataUtilities.createType(name, spec)
-    featureType.getUserData.put(SimpleFeatureTypes.DEFAULT_DATE_KEY, "SQLDATE")
+    //featureType.getUserData.put(SimpleFeatureTypes.DEFAULT_DATE_KEY, "SQLDATE")
     featureType
   }
 
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-    //conf.setMaster("local[3]")
+    conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
@@ -274,5 +273,6 @@ object GeomesaHbaseWrite {
 
     GeoMesaSpark.apply(dsConf).save(processedRDD, dsConf, featureName)
     println("ingestion completed ...")
+
   }
 }
