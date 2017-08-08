@@ -4,14 +4,13 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.geotools.data.{DataStoreFinder, Query}
 import org.geotools.factory.CommonFactoryFinder
-import org.geotools.filter.text.ecql.ECQL
 import org.locationtech.geomesa.hbase.data.HBaseDataStore
 import org.locationtech.geomesa.spark.{GeoMesaSpark, GeoMesaSparkKryoRegistrator}
 import org.opengis.feature.simple.SimpleFeature
 
 import scala.collection.JavaConversions._
 
-object ShallowJoin {
+object CartesianJoinSiteExpAndWildFire {
   val wildFireDsParams = Map("bigtable.table.name" -> "CatEvents_Fire_2000_US_Wildfire_Footprint")
 
   val siteExpDsParams =Map("bigtable.table.name" -> "1M_site_exp_portfolio")
