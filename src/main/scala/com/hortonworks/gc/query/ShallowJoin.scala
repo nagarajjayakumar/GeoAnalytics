@@ -1,6 +1,4 @@
 package com.hortonworks.gc.query
-import com.hortonworks.gc.ingest.GeomesaHbaseWrite.geometryFactory
-import com.vividsolutions.jts.geom.{Coordinate, Geometry}
 import org.apache.hadoop.conf.Configuration
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
@@ -46,7 +44,7 @@ object ShallowJoin {
     val rddProviderSiteExp     = GeoMesaSpark(siteExpDsParams)
 
     val wildFireRdd: RDD[SimpleFeature] = rddProviderWildFire.rdd(new Configuration(), sc, wildFireDsParams, new Query("wildfireevent"))
-    val siteExpRdd: RDD[SimpleFeature] = rddProviderSiteExp.rdd(new Configuration(), sc, siteExpDsParams, new Query("siteexposure_event", ECQL.toFilter("portfolio_id = 3")))
+    val siteExpRdd: RDD[SimpleFeature] = rddProviderSiteExp.rdd(new Configuration(), sc, siteExpDsParams, new Query("siteexposure_event"))
 
     val broadcastedCover = sc.broadcast(wildFireRdd.collect)
 
@@ -94,14 +92,12 @@ object ShallowJoin {
 
 
     val keyedDataDf = sparkSession.createDataFrame(keyedData)
+
+    val new_df = keyedDataDf.filter("portfolio_id is not null")
     //print(keyedDataDf.collect().length)
+    new_df.printSchema()
 
-    keyedDataDf.show()
-    keyedDataDf.printSchema()
-
-
-
-    keyedDataDf.write.format("com.databricks.spark.csv")
+    new_df.write.format("com.databricks.spark.csv")
       .option("delimiter", "|")
       .option("header", "true")
       .save("/tmp/results2")
