@@ -4,6 +4,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.geotools.data.{DataStoreFinder, Query}
 import org.geotools.factory.CommonFactoryFinder
+import org.geotools.filter.text.ecql.ECQL
 import org.locationtech.geomesa.hbase.data.HBaseDataStore
 import org.locationtech.geomesa.spark.{GeoMesaSpark, GeoMesaSparkKryoRegistrator}
 import org.opengis.feature.simple.SimpleFeature
@@ -43,7 +44,7 @@ object CartesianJoinSiteExpAndWildFire {
     val rddProviderSiteExp     = GeoMesaSpark(siteExpDsParams)
 
     val wildFireRdd: RDD[SimpleFeature] = rddProviderWildFire.rdd(new Configuration(), sc, wildFireDsParams, new Query("wildfireevent"))
-    val siteExpRdd: RDD[SimpleFeature] = rddProviderSiteExp.rdd(new Configuration(), sc, siteExpDsParams, new Query("siteexposure_event"))
+    val siteExpRdd: RDD[SimpleFeature] = rddProviderSiteExp.rdd(new Configuration(), sc, siteExpDsParams, new Query("siteexposure_event", ECQL.toFilter("portfolio_id = 51332")))
 
     val broadcastedCover = sc.broadcast(wildFireRdd.collect)
 

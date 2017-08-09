@@ -30,7 +30,7 @@ object GeomesaHbaseWrite {
   // works for latest version of Geomesa 1.3.2 + Spark 2.x
   // spark-2.0.0/bin/spark-submit --class com.hortonworks.gc.ingest.hbase.GeomesaHbaseWrite geomesa-utils-15-1.0.jar
 
-  val dsConf = Map("bigtable.table.name" -> "1M_site_exp_portfolio")
+  val dsConf = Map("bigtable.table.name" -> "site_exposure_1M")
 
   var LATITUDE_COL_IDX = 9
   var LONGITUDE_COL_IDX = 11
@@ -41,10 +41,10 @@ object GeomesaHbaseWrite {
 
   val featureName = "siteexposure_event"
   //val ingestFile =
-  //    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_exposure/site_exposure.csv"
+    //  "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
 
   val ingestFile =
-    "file:///Users/njayakumar/Desktop/GuyCarpenter/workspace/GeoAnalytics/src/main/resources/ingest_full.txt"
+    "hdfs://usdf23v0377.mrshmc.com:8020/tmp/ingest_full.txt"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0

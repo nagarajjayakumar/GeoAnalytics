@@ -29,16 +29,17 @@ object GeomesaHbaseWriteSiteLossAnalysis {
   // works for latest version of Geomesa 1.3.2 + Spark 2.x
   // spark-2.0.0/bin/spark-submit --class com.hortonworks.gc.ingest.hbase.GeomesaHbaseWrite geomesa-utils-15-1.0.jar
 
-  val dsConf = Map("bigtable.table.name" -> "sitelossanalysis")
+  val dsConf = Map("bigtable.table.name" -> "site_loss_analysis_1M")
 
-  var ID_COL_IDX = 2
+  var ID_COL_IDX = 0
   var featureBuilder: SimpleFeatureBuilder = null
   var geometryFactory: GeometryFactory = JTSFactoryFinder.getGeometryFactory
 
   val featureName = "sitelossanalyzevent"
-  val ingestFile =
-    "hdfs://csma0.field.hortonworks.com:8020/tmp/geospatial/site_loss_analysis/site_loss_analysis.csv"
+  //val ingestFile =
+  //  "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_loss_analysis_1M/site_loss_analysis_1M.csv"
 
+  val ingestFile = "hdfs://usdf23v0377.mrshmc.com:8020/tmp/ingest_site_loss_analysis_csv.txt"
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
     "analysis_id:java.lang.Long", //1
