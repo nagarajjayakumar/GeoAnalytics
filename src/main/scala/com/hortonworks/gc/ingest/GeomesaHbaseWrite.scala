@@ -40,11 +40,8 @@ object GeomesaHbaseWrite {
   var geometryFactory: GeometryFactory = JTSFactoryFinder.getGeometryFactory
 
   val featureName = "siteexposure_event"
-  //val ingestFile =
-    //  "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
-
   val ingestFile =
-    "hdfs://usdf23v0377.mrshmc.com:8020/tmp/ingest_full.txt"
+      "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
@@ -232,7 +229,7 @@ object GeomesaHbaseWrite {
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-    conf.setMaster("local[3]")
+    //conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")

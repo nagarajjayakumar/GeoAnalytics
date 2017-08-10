@@ -36,10 +36,9 @@ object GeomesaHbaseWriteSiteLossAnalysis {
   var geometryFactory: GeometryFactory = JTSFactoryFinder.getGeometryFactory
 
   val featureName = "sitelossanalyzevent"
-  //val ingestFile =
-  //  "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_loss_analysis_1M/site_loss_analysis_1M.csv"
+  val ingestFile =
+    "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_loss_analysis_1M/site_loss_analysis_1M.csv"
 
-  val ingestFile = "hdfs://usdf23v0377.mrshmc.com:8020/tmp/ingest_site_loss_analysis_csv.txt"
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0
     "analysis_id:java.lang.Long", //1

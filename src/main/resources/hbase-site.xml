@@ -37,6 +37,7 @@
     <!--<name>hbase.zookeeper.quorum</name>-->
     <!--<value>localhost</value>-->
   <!--</property>-->
+
   <property>
     <name>hbase.zookeeper.property.clientPort</name>
     <value>2181</value>
@@ -44,12 +45,12 @@
 
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>csh1.field.hortonworks.com,csh2.field.hortonworks.com,cssb0.field.hortonworks.com</value>
+    <value>usdf23v0379.mrshmc.com,usdf23v0377.mrshmc.com,usdf23v0378.mrshmc.com</value>
   </property>
 
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data</value>
+    <value>hdfs://usdf23v0377.mrshmc.com:8020/apps/hbase/data</value>
   </property>
 
   <property>
