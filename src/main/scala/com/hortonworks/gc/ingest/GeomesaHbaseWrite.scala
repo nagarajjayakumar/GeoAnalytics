@@ -35,7 +35,7 @@ object GeomesaHbaseWrite {
   var LATITUDE_COL_IDX = 9
   var LONGITUDE_COL_IDX = 11
   var ID_COL_IDX = 0
-  var ADD_ID_COL_IDX = 3
+
 
   var SHAPE_COL_IDX = 6
   var featureBuilder: SimpleFeatureBuilder = null
@@ -49,7 +49,7 @@ object GeomesaHbaseWrite {
     "portfolio_id:java.lang.Long", //0
     "peril_id:java.lang.Long", //1
     "account_id:String", //2
-    "site_id:String:index=true", //3
+    "site_id:String", //3
     "arcgis_id:java.lang.Long", //4
     "nz_grid_id:String", //5
     "shape:String", //6
@@ -197,8 +197,8 @@ object GeomesaHbaseWrite {
     val simpleFeature: SimpleFeature =
       featureBuilder.buildFeature(attributes(ID_COL_IDX))
     // be sure to tell GeoTools explicitly that you want to use the ID you provided
-    //simpleFeature.getUserData
-    //  .put(Hints.USE_PROVIDED_FID, java.lang.Boolean.TRUE)
+    simpleFeature.getUserData
+      .put(Hints.USE_PROVIDED_FID, java.lang.Boolean.TRUE)
 
     var i: Int = 0
     val loop = new Breaks
@@ -225,14 +225,14 @@ object GeomesaHbaseWrite {
     val spec = Joiner.on(",").join(attributes)
     val featureType = DataUtilities.createType(name, spec)
     //featureType.getUserData.put(SimpleFeatureTypes.DEFAULT_DATE_KEY, "SQLDATE")
-    featureType.getDescriptor("site_id").getUserData.put("index", "true")
+    //featureType.getDescriptor("site_id").getUserData.put("index", "true")
     featureType
   }
 
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-    //conf.setMaster("local[3]")
+   // conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
