@@ -41,7 +41,7 @@ object GeomesaHbaseWrite {
 
   val featureName = "siteexposure_event"
   val ingestFile =
-      "hdfs://usdf23v0377.mrshmc.com:8020/tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
+      "hdfs:///tmp/geospatial/site_exposure_1M/site_exposure_1M.csv"
 
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long", //0

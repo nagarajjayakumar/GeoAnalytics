@@ -75,6 +75,7 @@ object GeomesaHbaseReadUsingSparkSql {
     val sqlQuery =
       "select event.portfolio_id, sum(event.s_udf_met1), avg(event.s_udf_met1), sum (sitelossanalyzevent.gross_loss) from event  LEFT OUTER JOIN sitelossanalyzevent ON event.site_id = sitelossanalyzevent.site_id    group by event.portfolio_id"
 
+
     val resultDataFrame = sparkSession.sql(sqlQuery)
 
     resultDataFrame.show
