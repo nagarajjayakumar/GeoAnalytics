@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6182251f-a49f-4888-958d-59e1249fe2d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePolicyExposure.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePortfolioAccount.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hbase-site.xml" afterPath="$PROJECT_DIR$/src/main/resources/hbase-site.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeomesaHbaseWritePolicyExposure.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePolicyExposure.scala">
+      <file leaf-file-name="GeomesaHbaseWritePortfolioAccount.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePortfolioAccount.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="39" column="69" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="69" />
+              <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hbase-site.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hbase-site.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,6 +147,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWrite.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/hbase-site.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePolicyExposure.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePortfolioAccount.scala" />
       </list>
     </option>
   </component>
@@ -300,26 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeomesaHbaseWritePolicyExposure">
-    <configuration name="GeomesaHbaseReadUsingSparkCore" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.hortonworks.gc.query.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.hortonworks.gc.query.GeomesaHbaseReadUsingSparkCore" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="geoanalytics" />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="Application.GeomesaHbaseWritePortfolioAccount">
     <configuration name="GeomesaHbaseReadUsingSparkSql" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -366,6 +357,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.hortonworks.gc.ingest.GeomesaHbaseWritePolicyExposure" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="geoanalytics" />
+      <envs />
+    </configuration>
+    <configuration name="GeomesaHbaseWritePortfolioAccount" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.hortonworks.gc.ingest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.hortonworks.gc.ingest.GeomesaHbaseWritePortfolioAccount" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -479,17 +489,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.GeomesaHbaseWrite (1)" />
       <item index="1" class="java.lang.String" itemvalue="Application.ShallowJoin" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkCore" />
-      <item index="3" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkSql" />
-      <item index="4" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePolicyExposure" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkSql" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePolicyExposure" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePortfolioAccount" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePolicyExposure" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkSql" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GeomesaHbaseWrite (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ShallowJoin" />
-        <item index="4" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkCore" />
+        <item index="0" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePortfolioAccount" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GeomesaHbaseWritePolicyExposure" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GeomesaHbaseReadUsingSparkSql" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GeomesaHbaseWrite (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ShallowJoin" />
       </list>
     </recent_temporary>
   </component>
@@ -521,12 +531,12 @@
       <workItem from="1502225222094" duration="9654000" />
       <workItem from="1502376753974" duration="5019000" />
       <workItem from="1502984198191" duration="4532000" />
-      <workItem from="1503272967420" duration="3952000" />
+      <workItem from="1503272967420" duration="5033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183754000" />
+    <option name="totallyTimeSpent" value="184835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="853" extended-state="0" />
@@ -681,7 +691,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/geotools/gt-api/15.1/gt-api-15.1-sources.jar!/org/geotools/feature/FeatureCollection.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/geotools/gt-geojson/15.1/gt-geojson-15.1-sources.jar!/org/geotools/geojson/feature/FeatureJSON.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1012,18 +1021,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePolicyExposure.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hbase-site.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="345">
           <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePolicyExposure.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWritePortfolioAccount.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="39" column="69" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="69" />
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding />
         </state>
       </provider>
