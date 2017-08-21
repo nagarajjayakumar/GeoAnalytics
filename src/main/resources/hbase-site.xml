@@ -38,6 +38,32 @@
     <!--<value>localhost</value>-->
   <!--</property>-->
 
+  <!--<property>-->
+    <!--<name>hbase.zookeeper.property.clientPort</name>-->
+    <!--<value>2181</value>-->
+  <!--</property>-->
+
+  <!--<property>-->
+    <!--<name>hbase.zookeeper.quorum</name>-->
+    <!--<value>usdf23v0379.mrshmc.com,usdf23v0377.mrshmc.com,usdf23v0378.mrshmc.com</value>-->
+  <!--</property>-->
+
+  <!--<property>-->
+    <!--<name>hbase.rootdir</name>-->
+    <!--<value>hdfs://usdf23v0377.mrshmc.com:8020/apps/hbase/data</value>-->
+  <!--</property>-->
+
+  <!--<property>-->
+    <!--<name>hbase.coprocessor.user.region.classes</name>-->
+    <!--<value>org.locationtech.geomesa.hbase.coprocessor.GeoMesaCoprocessor</value>-->
+  <!--</property>-->
+
+  <!--<property>-->
+    <!--<name>zookeeper.znode.parent</name>-->
+    <!--<value>/hbase-unsecure</value>-->
+  <!--</property>-->
+
+
   <property>
     <name>hbase.zookeeper.property.clientPort</name>
     <value>2181</value>
@@ -45,12 +71,12 @@
 
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>usdf23v0379.mrshmc.com,usdf23v0377.mrshmc.com,usdf23v0378.mrshmc.com</value>
+    <value>csh1.field.hortonworks.com,csh2.field.hortonworks.com,cssb0.field.hortonworks.com</value>
   </property>
 
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://usdf23v0377.mrshmc.com:8020/apps/hbase/data</value>
+    <value>hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data</value>
   </property>
 
   <property>
@@ -62,5 +88,6 @@
     <name>zookeeper.znode.parent</name>
     <value>/hbase-unsecure</value>
   </property>
+
 
 </configuration>
