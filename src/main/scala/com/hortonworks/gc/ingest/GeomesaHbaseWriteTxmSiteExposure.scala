@@ -141,55 +141,17 @@ object GeomesaHbaseWriteTxmSiteExposure {
 
     dataFramePolicyExposure.createOrReplaceTempView(nzgridevent)
 
-
     val sqlQuery2 = "SELECT se.portfolio_id,se.site_id ,nze.g_country_id, nze.geo_unit_id FROM siteexposure_event as  se, nzgrid_event as nze  where se.nz_grid_id=nze.nz_grid_id  "
-
 
     val resultDataFrame2 = sparkSession.sql(sqlQuery2)
 
-    val distDataRDD = resultDataFrame2.rdd
+    resultDataFrame2
+      .write
+      .format("geomesa")
+      .options(dsConf)
+      .option("geomesa.feature",featureName)
+      .save()
 
-
-
-    val processedRDD = distDataRDD.mapPartitions {
-      valueIterator =>
-        if (valueIterator.isEmpty) {
-          Collections.emptyIterator
-        }
-
-        //  setup code for SimpleFeatureBuilder
-        try {
-          val featureType: SimpleFeatureType =
-            buildGeomesaTxmSiteExposureEventFeatureType(featureName, attributes)
-          featureBuilder = new SimpleFeatureBuilder(featureType)
-        } catch {
-          case e: Exception => {
-            throw new IOException("Error setting up feature type", e)
-          }
-        }
-
-        val ff = CommonFactoryFinder.getFilterFactory2
-        val portfolioId = ff.property(portfolio_id)
-        val siteId = ff.property(site_id)
-        val gcountryid = ff.property(g_country_id)
-        val geounitid = ff.property(geo_unit_id)
-
-        valueIterator.map { f =>
-          val siteexp = site_exp(
-            portfolioId.evaluate(f).asInstanceOf[Long],
-            siteId.evaluate(f).asInstanceOf[String],
-            gcountryid.evaluate(f).asInstanceOf[Long],
-            geounitid.evaluate(f).asInstanceOf[Long]
-          )
-          val simpleFeature = createSimpleFeature(siteexp)
-          if (!valueIterator.hasNext) {
-            // cleanup here
-          }
-          simpleFeature
-        }
-    }
-
-    GeoMesaSpark.apply(dsConf).save(processedRDD, dsConf, featureName)
-    println("""Site Loss Analysis Ingestion completed ...""")
+    println("""txmsiteexposureevent Ingestion completed ...""")
   }
 }
