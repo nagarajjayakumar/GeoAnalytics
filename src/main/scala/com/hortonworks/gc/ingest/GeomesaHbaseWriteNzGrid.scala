@@ -113,7 +113,7 @@ object GeomesaHbaseWriteNzGrid {
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-    conf.setMaster("local[3]")
+    // conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
