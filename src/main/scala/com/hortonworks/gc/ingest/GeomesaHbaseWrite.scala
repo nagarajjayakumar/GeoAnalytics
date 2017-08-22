@@ -51,7 +51,7 @@ object GeomesaHbaseWrite {
     "account_id:String", //2
     "site_id:String", //3
     "arcgis_id:java.lang.Long", //4
-    "nz_grid_id:String", //5
+      "nz_grid_id:String", //5
     "shape:String", //6
     "sitenum:String", //7
     "sitename:String", //8
@@ -232,7 +232,7 @@ object GeomesaHbaseWrite {
   def main(args: Array[String]) {
 
     val conf = new SparkConf()
-   // conf.setMaster("local[3]")
+   //    conf.setMaster("local[3]")
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
