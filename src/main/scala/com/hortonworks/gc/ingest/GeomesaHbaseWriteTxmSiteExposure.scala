@@ -51,7 +51,6 @@ object GeomesaHbaseWriteTxmSiteExposure {
   var attributes = Lists.newArrayList(
     "portfolio_id:java.lang.Long",
     "site_id:String",
-    "policy_id:java.lang.Long",
     "g_country_id:java.lang.Long",
     "geo_unit_id:java.lang.Long"
   )

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6182251f-a49f-4888-958d-59e1249fe2d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="GeomesaHbaseWriteTxmSiteExposure.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+            <state relative-caret-position="90">
+              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
               <folding>
                 <element signature="e#35#61#0" expanded="true" />
               </folding>
@@ -548,12 +547,12 @@
       <workItem from="1502984198191" duration="4532000" />
       <workItem from="1503272967420" duration="9637000" />
       <workItem from="1503316297723" duration="10058000" />
-      <workItem from="1503403885091" duration="6558000" />
+      <workItem from="1503403885091" duration="7361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206055000" />
+    <option name="totallyTimeSpent" value="206858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="853" extended-state="0" />
@@ -1113,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
+        <state relative-caret-position="90">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding>
             <element signature="e#35#61#0" expanded="true" />
           </folding>
