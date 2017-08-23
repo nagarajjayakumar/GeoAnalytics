@@ -77,7 +77,7 @@ object GeomesaHbaseWriteTxmHexZoom {
       .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
       .config("spark.kryo.registrator",
       "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
-      .master("local[3]")
+      //.master("local[3]")
       .getOrCreate()
 
 
