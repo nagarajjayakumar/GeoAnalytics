@@ -164,7 +164,7 @@ object GeomesaHbaseWriteTxmHexZoom {
 
     resultDataFrame_8.createOrReplaceTempView("siteexp_51325_tmp_l8")
 
-    resultDataFrame_7
+    resultDataFrame_8
       .write
       .format("geomesa")
       .options(dsConf)

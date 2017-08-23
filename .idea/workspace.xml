@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6182251f-a49f-4888-958d-59e1249fe2d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmHexZoom.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmHexZoom.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="GeomesaHbaseWrite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWrite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="154" column="10" lean-forward="false" selection-start-line="154" selection-start-column="6" selection-end-line="154" selection-end-column="10" />
+            <state relative-caret-position="-99">
+              <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -38,7 +39,7 @@
       <file leaf-file-name="GeoJsonIngestWildFireShapes.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeoJsonIngestWildFireShapes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="-1216">
               <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="28" />
               <folding />
             </state>
@@ -58,7 +59,7 @@
       <file leaf-file-name="GeomesaHbaseWriteHexZoom.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteHexZoom.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1108">
+            <state relative-caret-position="204">
               <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="53" />
               <folding />
             </state>
@@ -68,7 +69,7 @@
       <file leaf-file-name="GeomesaHbaseWriteTxmSiteExposure.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
+            <state relative-caret-position="436">
               <caret line="138" column="134" lean-forward="false" selection-start-line="138" selection-start-column="122" selection-end-line="138" selection-end-column="134" />
               <folding>
                 <element signature="e#35#61#0" expanded="true" />
@@ -80,8 +81,8 @@
       <file leaf-file-name="GeomesaHbaseWriteTxmHexZoom.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmHexZoom.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+            <state relative-caret-position="1708">
+              <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -603,16 +604,15 @@
       <workItem from="1503272967420" duration="9637000" />
       <workItem from="1503316297723" duration="10058000" />
       <workItem from="1503403885091" duration="9673000" />
-      <workItem from="1503491223842" duration="5125000" />
+      <workItem from="1503491223842" duration="8521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214295000" />
+    <option name="totallyTimeSpent" value="217691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="853" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -628,7 +628,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42846924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42846924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1085,22 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeoJsonIngestWildFireShapes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWrite.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="154" column="10" lean-forward="false" selection-start-line="154" selection-start-column="6" selection-end-line="154" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteNzGrid.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-91">
@@ -1119,17 +1103,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteHexZoom.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWrite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1108">
-          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="-99">
+          <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeoJsonIngestWildFireShapes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1216">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmSiteExposure.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
+        <state relative-caret-position="436">
           <caret line="138" column="134" lean-forward="false" selection-start-line="138" selection-start-column="122" selection-end-line="138" selection-end-column="134" />
           <folding>
             <element signature="e#35#61#0" expanded="true" />
@@ -1137,10 +1129,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteHexZoom.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/hortonworks/gc/ingest/GeomesaHbaseWriteTxmHexZoom.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        <state relative-caret-position="1708">
+          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding />
         </state>
       </provider>
