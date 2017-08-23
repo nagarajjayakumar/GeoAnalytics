@@ -37,7 +37,7 @@ object GeomesaHbaseWriteHexZoom {
 
   val featureName = "hexzoomevent"
   val ingestFile =
-    "hdfs://tmp/geospatial/hexzoom/ap_hex_zoom.csv"
+    "hdfs:///tmp/geospatial/hexzoom/ap_hex_zoom.csv"
 
   var attributes = Lists.newArrayList(
     "zoom_id:java.lang.Long" ,
