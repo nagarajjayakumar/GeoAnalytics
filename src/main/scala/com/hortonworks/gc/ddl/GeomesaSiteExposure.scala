@@ -177,6 +177,13 @@ object GeomesaSiteExposure {
     conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     conf.set("spark.kryo.registrator",
              "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
+    conf.set("hbase.zookeeper.property.clientPort","2181")
+    conf.set("hbase.zookeeper.quorum","csh1.field.hortonworks.com,csh2.field.hortonworks.com,cssb0.field.hortonworks.com")
+    conf.set("hbase.rootdir","hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data")
+    conf.set("hbase.coprocessor.user.region.classes","org.locationtech.geomesa.hbase.coprocessor.GeoMesaCoprocessor")
+    conf.set("zookeeper.znode.parent","/hbase-unsecure")
+
+
 
 
     println("DDL site_exposure_1M completed ...")
