@@ -32,9 +32,6 @@ object GeomesaSiteExposure {
 
   val dsConf = Map("bigtable.table.name" -> "site_exposure_1M_DDL")
 
-  var featureBuilder: SimpleFeatureBuilder = null
-  var geometryFactory: GeometryFactory = JTSFactoryFinder.getGeometryFactory
-
   val featureName = "siteexposure_event"
 
 
@@ -172,21 +169,7 @@ object GeomesaSiteExposure {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf()
-    conf.setMaster("local[3]")
-    conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
-    conf.set("spark.kryo.registrator",
-             "org.locationtech.geomesa.spark.GeoMesaSparkKryoRegistrator")
-    conf.set("hbase.zookeeper.property.clientPort","2181")
-    conf.set("hbase.zookeeper.quorum","csh1.field.hortonworks.com,csh2.field.hortonworks.com,cssb0.field.hortonworks.com")
-    conf.set("hbase.rootdir","hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data")
-    conf.set("hbase.coprocessor.user.region.classes","org.locationtech.geomesa.hbase.coprocessor.GeoMesaCoprocessor")
-    conf.set("zookeeper.znode.parent","/hbase-unsecure")
-
-
-
-
-    println("DDL site_exposure_1M completed ...")
+   println("DDL site_exposure_1M completed ...")
 
   }
 }
