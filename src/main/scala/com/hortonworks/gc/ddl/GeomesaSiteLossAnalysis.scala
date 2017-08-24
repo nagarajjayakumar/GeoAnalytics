@@ -27,7 +27,7 @@ import scala.collection.JavaConversions._
 object GeomesaSiteLossAnalysis {
 
   // works for latest version of Geomesa 1.3.2 + Spark 2.x
-  // spark-2.0.0/bin/spark-submit --class com.hortonworks.gc.ingest.hbase.GeomesaHbaseWrite geomesa-utils-15-1.0.jar
+  // java -cp /tmp/geoanalytics-1.0-SNAPSHOT-fat.jar   com.hortonworks.gc.ddl.GeomesaSiteLossAnalysis
 
   val dsConf = Map("bigtable.table.name" -> "site_loss_analysis_1M")
   val featureName = "sitelossanalyzevent"

@@ -26,6 +26,9 @@ import scala.util.control.NonFatal
 
 object GeomesaWildFireShapes {
 
+  // works for latest version of Geomesa 1.3.2 + Spark 2.x
+  // java -cp /tmp/geoanalytics-1.0-SNAPSHOT-fat.jar   com.hortonworks.gc.ddl.GeomesaWildFireShapes
+
   val dsConf = Map("bigtable.table.name" -> "CatEvents_Fire_2000_US_Wildfire_Footprint")
   val featureName = "wildfireevent"
 
