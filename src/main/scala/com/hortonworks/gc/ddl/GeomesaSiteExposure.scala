@@ -30,7 +30,7 @@ object GeomesaSiteExposure {
   // works for latest version of Geomesa 1.3.2 + Spark 2.x
   // java -cp /tmp/geoanalytics-1.0-SNAPSHOT-fat.jar   com.hortonworks.gc.ddl.GeomesaSiteExposure
 
-  val dsConf = Map("bigtable.table.name" -> "site_exposure_1M_DDL")
+  val dsConf = Map("bigtable.table.name" -> "site_exposure_1M")
 
   val featureName = "siteexposure_event"
 
