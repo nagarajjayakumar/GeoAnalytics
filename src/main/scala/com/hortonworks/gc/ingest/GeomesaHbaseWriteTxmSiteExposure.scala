@@ -136,7 +136,7 @@ object GeomesaHbaseWriteTxmSiteExposure {
 
     dataFramePolicyExposure.createOrReplaceTempView(nzgridevent)
 
-    val sqlQuery2 = "SELECT se.portfolio_id,se.site_id ,nze.g_country_id, nze.geo_unit_id FROM siteexposure_event as  se, nzgrid_event as nze  where se.nz_grid_id=nze.nz_grid_id  "
+    val sqlQuery2 = "SELECT se.portfolio_id,se.site_id ,nze.g_country_id, nze.geo_unit_id FROM siteexposure_event as  se, nzgrid_event as nze  where se.nz_grid_id=nze.nz_grid_id and st_intersects(se.geom,  nze.SHAPE ) "
 
     val resultDataFrame2 = sparkSession.sql(sqlQuery2)
 
