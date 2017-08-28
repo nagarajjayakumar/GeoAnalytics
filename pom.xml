@@ -328,6 +328,8 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <finalName>${project.artifactId}-${project.version}-fat</finalName>
+                            <!--<outputDirectory>../guide</outputDirectory>-->
                             <transformers>
                                 <!-- This bit sets the main class for the executable jar as you otherwise -->
                                 <!-- would with the assembly plugin                                       -->
