@@ -77,7 +77,7 @@ object GeomesaWildFireShapes {
 
   val ds = DataStoreFinder
     .getDataStore(dsConf)
-    .asInstanceOf[HBaseDataStore]
+    .asInstanceOf[HBaseDataStore].createSchema(featureType)
 
   def main(args: Array[String]) {
 
