@@ -97,10 +97,13 @@ object CartesianJoinSiteExpAndWildFire {
     //print(keyedDataDf.collect().length)
     new_df.printSchema()
 
-    new_df.write.format("com.databricks.spark.csv")
+    new_df.show()
+
+    /*new_df.write.format("com.databricks.spark.csv")
       .option("delimiter", "|")
       .option("header", "true")
-      .save("/tmp/results2")
+      .save("/tmp/results2") */
+
     wildFireDs.dispose()
     siteExpDs.dispose()
 
