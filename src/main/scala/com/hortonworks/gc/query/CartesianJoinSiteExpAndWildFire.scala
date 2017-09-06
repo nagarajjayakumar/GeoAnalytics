@@ -14,7 +14,7 @@ import scala.collection.JavaConversions._
 object CartesianJoinSiteExpAndWildFire {
   val wildFireDsParams = Map("bigtable.table.name" -> "CatEvents_Fire_2000_US_Wildfire_Footprint")
 
-  val siteExpDsParams =Map("bigtable.table.name" -> "1M_site_exp_portfolio")
+  val siteExpDsParams =Map("bigtable.table.name" -> "site_exposure_1M")
 
   val wildFireDs = DataStoreFinder.getDataStore(wildFireDsParams).asInstanceOf[HBaseDataStore]
   val siteExpDs = DataStoreFinder.getDataStore(siteExpDsParams).asInstanceOf[HBaseDataStore]

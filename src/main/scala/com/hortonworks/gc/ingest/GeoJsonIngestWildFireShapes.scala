@@ -33,7 +33,7 @@ object GeoJsonIngestWildFireShapes {
 
   val featureName = "wildfireevent"
   val ingestFile =
-    "/Users/njayakumar/Desktop/GuyCarpenter/workspace/GeoAnalytics/src/main/resources/wildfire.json"
+    "hdfs:///tmp/geospatial/wildfire/wildfire.json"
 
   var attributes = Lists.newArrayList(
     "OBJECTID:java.lang.Long",
@@ -88,7 +88,7 @@ object GeoJsonIngestWildFireShapes {
       .builder()
       .appName("Geomesa Wild Fire GeoJSON IDX")
       .config("spark.sql.crossJoin.enabled", "true")
-      .master("local[*]")
+      //.master("local[*]")
       .getOrCreate()
 
     val name = "wildfireidx"
