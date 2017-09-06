@@ -33,7 +33,7 @@ object GeoJsonIngestWildFireShapes {
 
   val featureName = "wildfireevent"
   val ingestFile =
-    "hdfs:///tmp/geospatial/wildfire/wildfire.json"
+    "/tmp/geospatial/wildfire/wildfire.json"
 
   var attributes = Lists.newArrayList(
     "OBJECTID:java.lang.Long",
