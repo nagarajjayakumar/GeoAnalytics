@@ -73,17 +73,17 @@
     <!--<name>hbase.zookeeper.quorum</name>-->
     <!--<value>csh1.field.hortonworks.com,csh2.field.hortonworks.com,cssb0.field.hortonworks.com</value>-->
   <!--</property>-->
-
-  <!--<property>-->
-    <!--<name>hbase.zookeeper.quorum</name>-->
-    <!--<value>cs0.field.hortonworks.com,cs1.field.hortonworks.com,cs2.field.hortonworks.com</value>-->
-  <!--</property>-->
   
   <!--<property>-->
     <!--<name>hbase.rootdir</name>-->
     <!--<value>hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data</value>-->
   <!--</property>-->
 
+  <!--<property>-->
+    <!--<name>hbase.zookeeper.quorum</name>-->
+    <!--<value>cs0.field.hortonworks.com,cs1.field.hortonworks.com,cs2.field.hortonworks.com</value>-->
+  <!--</property>-->
+  
   <!--<property>-->
     <!--<name>hbase.rootdir</name>-->
     <!--<value>hdfs://cs0.field.hortonworks.com:8020/apps/hbase/data</value>-->
