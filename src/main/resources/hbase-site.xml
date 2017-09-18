@@ -43,15 +43,15 @@
     <value>2181</value>
   </property>
 
-  <property>
-    <name>hbase.zookeeper.quorum</name>
-    <value>usdf23v0379.mrshmc.com,usdf23v0377.mrshmc.com,usdf23v0378.mrshmc.com</value>
-  </property>
+  <!--property>-->
+    <!--<name>hbase.zookeeper.quorum</name>-->
+    <!--<value>usdf23v0379.mrshmc.com,usdf23v0377.mrshmc.com,usdf23v0378.mrshmc.com</value>-->
+  <!--</property>-->
 
-  <property>
-    <name>hbase.rootdir</name>
-    <value>hdfs://usdf23v0377.mrshmc.com:8020/apps/hbase/data</value>
-  </property>
+  <!--<property>-->
+    <!--<name>hbase.rootdir</name>-->
+    <!--<value>hdfs://usdf23v0377.mrshmc.com:8020/apps/hbase/data</value>-->
+  <!--</property>-->
 
   <property>
     <name>hbase.coprocessor.user.region.classes</name>
@@ -62,7 +62,6 @@
     <name>zookeeper.znode.parent</name>
     <value>/hbase-unsecure</value>
   </property>
-
 
   <!--<property>-->
     <!--<name>hbase.zookeeper.property.clientPort</name>-->
@@ -79,15 +78,15 @@
     <!--<value>hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data</value>-->
   <!--</property>-->
 
-  <!--<property>-->
-    <!--<name>hbase.zookeeper.quorum</name>-->
-    <!--<value>cs0.field.hortonworks.com,cs1.field.hortonworks.com,cs2.field.hortonworks.com</value>-->
-  <!--</property>-->
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>cs0.field.hortonworks.com,cs1.field.hortonworks.com,cs2.field.hortonworks.com</value>
+  </property>
   
-  <!--<property>-->
-    <!--<name>hbase.rootdir</name>-->
-    <!--<value>hdfs://cs0.field.hortonworks.com:8020/apps/hbase/data</value>-->
-  <!--</property>-->
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://cs0.field.hortonworks.com:8020/apps/hbase/data</value>
+  </property>
   
   <!--<property>-->
     <!--<name>hbase.coprocessor.user.region.classes</name>-->
