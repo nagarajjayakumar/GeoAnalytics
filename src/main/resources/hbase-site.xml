@@ -75,10 +75,20 @@
   <!--</property>-->
 
   <!--<property>-->
+    <!--<name>hbase.zookeeper.quorum</name>-->
+    <!--<value>cs0.field.hortonworks.com,cs1.field.hortonworks.com,cs2.field.hortonworks.com</value>-->
+  <!--</property>-->
+  
+  <!--<property>-->
     <!--<name>hbase.rootdir</name>-->
     <!--<value>hdfs://csma0.field.hortonworks.com:8020/apps/hbase/data</value>-->
   <!--</property>-->
 
+  <!--<property>-->
+    <!--<name>hbase.rootdir</name>-->
+    <!--<value>hdfs://cs0.field.hortonworks.com:8020/apps/hbase/data</value>-->
+  <!--</property>-->
+  
   <!--<property>-->
     <!--<name>hbase.coprocessor.user.region.classes</name>-->
     <!--<value>org.locationtech.geomesa.hbase.coprocessor.GeoMesaCoprocessor</value>-->
